@@ -118,3 +118,14 @@ public Object visitWhileStmt(Stmt.While stmt) {
     return null;
 }
 
+
+// // String matching algorithm (naive) -> O(n * m)
+// for i in 0..(n - m): // n = len(Text), m = len(Pattern)
+//     match = true
+//     for j in 0..(m - 1):
+//         if T[i + j] != P[j]: // if the char in Text at i != to char in Pattern at j (same pos)
+//             match = false
+//             break
+
+//     if match:
+//         return "Match found at: ", i
