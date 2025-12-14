@@ -148,3 +148,46 @@ public Object visitWhileStmt(Stmt.While stmt) {
 
 //     SWAP A[i + 1] with A[high]
 //     return i + 1
+
+
+
+// // Modified PARTITION algo for special input case -> when all elements in array are equal:
+// PARTITION(A, low, high)
+// pivot = A[high]
+
+// allEqual = true
+// for c = low to high:
+//     if A[c] != pivot:
+//         allEqual = false
+//         break
+
+// if allEqual:
+//     return floor(low + high) // 2
+
+// i = low - 1
+// for j = low to high - 1:
+//     if A[j] <= pivot:
+//         i = i+ 1
+//         SWAQ A[i] with A[j]
+
+// SWAP A[i + 1] with A[high]
+// return i + 1
+
+
+QUICKSORT-RANDOM(A, low, high):
+    if low < high:
+        p = RANDOM-PARTITION(A, low, high)
+        QUICKSORT-RANDOM(A, low, p - 1)
+        QUICKSORT-RANDOM(A, p + 1, high)
+
+RANDOM-PARTITION(A, low, high):
+    pivot = RANDOM(low, high)
+    i = low - 1
+
+    for j = low to high - 1:
+        if A[j] <= pivot:
+            i = i + 1
+            SWAP A[i] with A[j]
+
+    SWAP A[i + 1] with A[high]
+    return i + 1
