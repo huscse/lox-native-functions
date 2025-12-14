@@ -215,3 +215,15 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //         Post-order(x.left)
 //         Post-order(x.right)
 //         Post-order x.key
+
+
+// // BST - Search O(h):
+// BST-search(x, k):
+//     if x == NIL or k = x.key:
+//         return x
+
+//     if k < x.key:
+//         return BST-search(x.left, k)
+    
+//     else:
+//         return BST-search(x.right, k)
