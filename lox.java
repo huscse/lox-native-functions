@@ -248,3 +248,23 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //     else:
 //         return Tree-Minimum(x.left)
 
+
+// // BST - Predecessor
+
+// BST-Predecessor(x):
+//     if x.left != NIL:
+//         return Tree-Maximum(x.left)
+
+//     y = x.p 
+//     while y != NIL and x = y.left:
+//         x = y
+//         y = y.p 
+    
+//     return y
+
+// Tree-Maximum(x):
+//     if x.right == NIL:
+//         return x
+
+//     else:
+//         return Tree-Maximum(x.right)
