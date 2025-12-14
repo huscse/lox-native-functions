@@ -227,3 +227,24 @@ public Object visitWhileStmt(Stmt.While stmt) {
     
 //     else:
 //         return BST-search(x.right, k)
+
+
+// // BST-Successor - O(h)
+// Binary-successor(x):
+//     if x.right != NIL:
+//         return Tree-Minimum(x.right)
+
+//     y = x.p
+//     while y != NIL and x = y.right:
+//         x = y
+//         y = y.p 
+
+//     return y
+
+// Tree-Minimun(x):
+//     if x.left == NIL:
+//         return x
+    
+//     else:
+//         return Tree-Minimum(x.left)
+
