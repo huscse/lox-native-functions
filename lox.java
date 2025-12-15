@@ -218,7 +218,8 @@ public Object visitWhileStmt(Stmt.While stmt) {
 
 
 // // BST - Search O(h):
-// BST-search(x, k):
+
+// BST-search(x, k):   x -> curr node, k -> what we're looking for
 //     if x == NIL or k = x.key:
 //         return x
 
@@ -270,6 +271,8 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //         return Tree-Maximum(x.right)
 
 
+
+
 // // BST-insert - O(h)  -> insert a new node in a bst without breaking bst rule
 
 // BST-insert(T, z):  // T -> the tree, z -> the new node we want to insert
@@ -290,11 +293,7 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //         T.root = z  // set z to be root of tree
     
 //     else if z.key < y.key:  // if new node's < parent node
-//         y.left = z         // new node (z) would be left child
+//         y.left = z         // new node (z) would be left child.
     
 //     else:
-//         y.right = z      // new would (z) would be right child
-
-
-
-
+//         y.right = z      // new node (z) would be right child.
