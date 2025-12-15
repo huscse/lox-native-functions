@@ -192,8 +192,9 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //     SWAP A[i + 1] with A[high]
 //     return i + 1
 
-// Binary search trees
 
+
+// Binary search trees
 // // tree traversals
 
 // In-order Traversal -> left -> node -> right
@@ -297,3 +298,61 @@ public Object visitWhileStmt(Stmt.While stmt) {
     
 //     else:
 //         y.right = z      // new node (z) would be right child.
+
+
+// // naive string matching
+// for i in 0 to n - m:
+//     match = true
+//     for j in 0 to m - 1:
+//         if T[i + j] != p[j]:
+//             match = false
+//             break
+    
+// return "match found at: ", i
+
+
+
+// Minimum spanning tree - cheapest path with no cycle
+// 2 algorithms, kruskal and prims
+// Kruskal - start with cheapest edge and connect rest to it
+
+// Kruskal thinks in edges
+
+// Kruskal-MST(G, w):  // G -> graph, w -> weights
+//     A = empty set // stores edges of the MST
+    
+//     sort edges of G by increasing weight w
+//     for each edge (u, v) in sorted order:
+//         if FIND-Set(u) != FIND-Set(v):
+//             add (u, v) to A 
+//             UNION(u, v)
+    
+//     return A // minimum spanning tree with no cycles
+
+
+// // Prims algorithm: thinks in vertices, start with any, look for cheapest and add
+// PRIM(G, r):                      // G = graph, r = starting vertex
+//     for each vertex v in G:      // go through every vertex
+//         key[v] = ∞               // cost to connect v (unknown at start)
+//         parent[v] = NIL          // v has no parent yet (not in MST)
+
+//     key[r] = 0                   // start vertex chosen first
+//                                  // because it has the smallest key
+
+//     Q = all vertices in G        // vertices not yet in the MST
+
+//     while Q is not empty:        // keep going until all vertices added
+
+//         u = vertex in Q with     // pick the vertex that is cheapest
+//             minimum key[u]       // to connect to the tree
+
+//         remove u from Q          // u is now officially in the MST
+
+//         for each neighbor v of u:    // look at all vertices connected to u
+
+//             if v in Q and            // only consider vertices not in MST
+//                weight(u, v) < key[v]:// found a cheaper way to connect v
+
+//                 parent[v] = u        // u will connect v in the MST
+//                 key[v] = weight(u,v)// update cheapest cost for v
+
