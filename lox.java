@@ -381,3 +381,23 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //                 parent[v] = u
 //                 ENQUEUE(Q, v)
          
+
+
+
+// // dfs -> go deep until u cant
+// DFS(G):
+//     for each vertex v in G:
+//         visited[v] = false
+    
+//     for each vertex v in G:
+//         if visited[v] == false:
+//             VISIT-DFS(G, v)
+
+
+// VISIT-Dfs(G, u):
+//     visited[u] = true
+
+//     for each neighbor of u:
+//         if visited[v] == false:
+//             parent[v] = u
+//             VISIT-Dfs(G, v)
