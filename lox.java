@@ -356,3 +356,28 @@ public Object visitWhileStmt(Stmt.While stmt) {
 //                 parent[v] = u        // u will connect v in the MST
 //                 key[v] = weight(u,v)// update cheapest cost for v
 
+ 
+
+// // BFS of a graph
+
+// BFS(G, s): // G -> graph, s -> start vertex
+//     for each vertex v in graph G:
+//         visited[v] = false
+//         distance[v] = infinity
+//         parent[v] = NIL
+
+//     visited[s] = true
+//     distance[s] = 0
+
+//     Q = empty Queue
+//     ENQUEUE(Q, s)
+//     while Q is not empty:
+//         u = DEQUEUE(Q)
+
+//         for each neighbour v of u:
+//             if visited[v] == false:
+//                 visited[v] = true
+//                 distance[v] = distance[u] + 1
+//                 parent[v] = u
+//                 ENQUEUE(Q, v)
+         
